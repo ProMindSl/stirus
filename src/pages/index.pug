@@ -1,0 +1,41 @@
+extends ../templates/template.pug
+block content
+  +header
+  +front
+  .container.mt-60
+    .row.d-flex
+      .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
+        +item('Sed ut perspiciatis', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+      .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
+        +item('Ut enim ad minima veniam, quis nostrum', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+      .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
+        +item('Sed ut perspiciatis', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+      .col-lg-4.col-sm-6.d-sm-flex.d-none.justify-content-center
+        +item('Sed ut perspiciatis', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+      .col-lg-4.col-sm-6.d-sm-flex.d-none.justify-content-center
+        +item('Ut enim ad minima veniam, quis nostrum', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+      .col-lg-4.col-sm-6.d-sm-flex.d-none.justify-content-center
+        +item('Sed ut perspiciatis', 'Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium')
+  .container
+    .row
+      .col-12
+        h2.mt-70.text-center Галерея!
+    .row.mt-10
+      .col-lg-4.col-sm-6
+        +picture
+      .col-lg-4.col-sm-6.d-none.d-sm-block
+        +picture
+      .col-lg-4.col-sm-6.d-none.d-lg-block
+        +picture
+  .container-fluid
+    .row
+      .col-12
+        h2.mt-70.text-center Форма
+      .col-xl-4.col-sm-6.offset-xl-4.offset-sm-3
+        form(action="#", method="POST").d-flex.flex-column.align-items-center.mt-10
+          input.input(type="text", placeholder="Имя")
+          input.input(type="email", placeholder="Email").mt-20
+          textarea.input.input--textarea(placeholder="Сообщение").mt-20
+          .d-flex.justify-content-center.mt-30
+            input.btn(type="submit", value="Отправить")
+  +footer(class="mt-100")

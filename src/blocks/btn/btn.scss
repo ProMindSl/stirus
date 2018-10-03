@@ -1,0 +1,14 @@
+.btn 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ 	width: 191px;
+	height: 50px;
+    background-color: $primary;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}

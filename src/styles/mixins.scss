@@ -1,0 +1,46 @@
+/* Стандартный transition для hover-анимаций */
+
+@mixin transition {
+  transition: 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+}
+
+
+/* Миксин замены цвета placeholder у input. 
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+@mixin placeholder($color, $font-family, $font-size, $font-weight) 
+{
+  &::-webkit-input-placeholder {color:$color; 
+                                font-family:$font-family;
+                                font-size:$font-size;
+                                font-weight:$font-weight;}
+  &::-moz-placeholder          {color:$color; 
+                                font-family:$font-family;
+                                font-size:$font-size;
+                                font-weight:$font-weight;}
+  &:-ms-input-placeholder      {color:$color; 
+                                font-family:$font-family;
+                                font-size:$font-size;
+                                font-weight:$font-weight;}
+}
+
+/* Миксин, помогающий расставлять бордеры у элементов с помощью HTML.
+Например, для того чтобы сделать у элемента стандартную границу снизу, ему нужно добавить класс .border-bottom. Если нужно добавить все границы — просто .border */
+$borders: (
+  'top',
+  'left', 
+  'right',
+  'bottom'
+);
+
+.border {
+  @each $position in $borders {
+    
+    &-#{$position} {
+      border-#{$position}: 1px solid $border-color;
+    }
+    
+    @if ($position == '') {
+      border: 1px solid $border-color;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.input 
+{
+  	min-width: 426px;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #bdbdbd;
+	background-color: #ffffff;
+
+	/*text*/
+	font-family: $font-family-sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	padding-left: 15px;
+  	color: $black;
+  	
+  	/*цвет текста в дефолтных значениях input*/
+	@include placeholder(#e0e0e0, $font-family-sans-serif, 16px, 300);
+
+	@media all and (max-width: 470px)
+	{
+		min-width: 300px;
+	}
+
+  &--textarea 
+  {
+	height: 150px;
+	border-radius: 3px;
+	border: 1px solid #bdbdbd;
+	background-color: #ffffff;
+
+	padding-top: 10px;
+  }
+}

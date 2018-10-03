@@ -1,0 +1,29 @@
+.socials 
+{
+  display: inline-flex;
+
+  &__item 
+  {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position: center; 
+
+    &--fb 
+    {
+    	background: $primary url("../img/fb_pic.svg") no-repeat;
+    	background-position: center;
+    }
+    
+    &--tw 
+    {
+    	background: $primary url("../img/tw_pic.svg") no-repeat;
+    	background-position: center;
+    }
+
+    &:hover
+    {
+    	background-color: #ea555d;
+    }
+  }
+}

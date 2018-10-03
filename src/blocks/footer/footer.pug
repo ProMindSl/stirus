@@ -1,0 +1,13 @@
+mixin footer(modifier)
+  .footer&attributes(attributes)
+    .container-fluid
+      .row
+        .col-12
+          .footer__top
+            nav.footer__sitemap
+              a.footer__link(href="#") Главная
+              a.footer__link(href="#") Новости
+              a.footer__link(href="#") Услуги
+              a.footer__link(href="#") Контакты
+            +socials(class="mt-20 mr-5")
+          span.footer__copyright  © 2018 re-mote, all rights reserved

@@ -1,0 +1,78 @@
+.footer 
+{
+	
+ 
+  &__top 
+  {
+  	display: flex;
+  	justify-content: space-between;
+  	align-content: space-between;
+    min-height: 140px;
+    border-top: 1px solid #e0e0e0;
+
+    /* компенсация отступов сетки bootstrap  */
+    margin-right: -15px; 
+    margin-left: -15px;
+  }
+  
+  &__sitemap 
+  {
+    display: inline-flex;
+   	margin-left: 15px;
+    margin-top: 20px;
+
+   	/* Перестройка меню карты сайта при маленьком разрешении */
+    @media all and (max-width: 550px)
+  	{
+  	  display: flex;
+      flex-direction: column;
+  	}
+  }
+  
+  &__link 
+  {
+    display: inline-flex;
+    align-items: center;
+    color: #1a1a1a;
+	  font-family: $font-family-sans-serif;
+	  font-size: 18px;
+	  font-weight: 300;
+	  height: 50px;
+	  margin-left: 30px;
+
+  	&:nth-child(1)
+  	{
+  		margin-left: 0px;
+  	}
+
+  	/* Правка отступов кнопок для маленького разрешения*/
+  	@media all and (max-width: 550px)
+  	{
+  		margin-left: 0;
+  		
+      &:last-child
+  		{
+  			margin-bottom: 30px;
+  		}
+      &:nth-child(1)
+      {
+        margin-left: 0px;
+      }
+  	}
+  }
+  
+  &__copyright 
+  {
+  	display: block; 
+  	min-height: 45px;
+  	font-family: $font-family-sans-serif;
+  	font-size: 18px;
+	  font-weight: 300;
+	  color: #828282;
+    padding-left: 15px;
+
+    /* компенсация отступов сетки bootstrap  */
+    margin-right: -15px; 
+    margin-left: -15px;
+  }
+}
