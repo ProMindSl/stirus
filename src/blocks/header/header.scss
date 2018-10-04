@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
+    /*align-content: center;*/
     min-height: 70px;
 
     /* компенсация отступов сетки bootstrap  */
@@ -30,10 +30,10 @@
 
     .header__sitemap /*&__sitemap */
     {
-       align-self: center;
+      /*align-self: flex-start;*/
       display: inline-flex;
       margin-left: 15px;
-      margin-top: 20px;
+      
 
       /* Перестройка меню карты сайта при маленьком разрешении */
       @media all and (max-width: 550px)
