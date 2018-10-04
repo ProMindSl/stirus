@@ -9,6 +9,11 @@
   font-family: $font-family-sans-serif;
   color: $black;
 
+  @include media-breakpoint-up(md) 
+  {
+    width: 425px;
+  }
+
   &__picture 
   {
     max-width: 425px;
