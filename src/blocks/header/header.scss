@@ -32,9 +32,7 @@
       flex-grow: 1;
 
       display: inline-flex;
-      margin-left: 15px;
       
-
       /* Перестройка меню карты сайта при маленьком разрешении */
       @media all and (max-width: 550px)
       {
@@ -45,9 +43,6 @@
     
     .header__link  /*&__link */
     {
-      /*background-color: green;*/
-      align-self: center;
-
       display: inline-flex;
       align-items: center;
       color: #1a1a1a;
@@ -60,6 +55,11 @@
       &:nth-child(1)
       {
         margin-left: 0px;
+      }
+
+      &:hover
+      {
+        color: $dark_primary;
       }
     }
 
