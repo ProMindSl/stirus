@@ -2,4 +2,29 @@ extends ../templates/template.pug
 block content
   +header
   +front-min('Документы', 'Документация на объект строительства')
-  
+  .container.mt-30
+    .row
+      .col-lg-8.mx-auto
+        table.table
+          thead
+            tr
+              th(scope='col') #
+              th(scope='col') First
+              th(scope='col') Last
+              th(scope='col') Handle
+          tbody
+            tr
+              th(scope='row') 1
+              td Mark
+              td Otto
+              td @mdo
+            tr
+              th(scope='row') 2
+              td Mark
+              td Otto
+              td @mdo
+            tr
+              th(scope='row') 3
+              td Mark
+              td Otto
+              td @mdo
