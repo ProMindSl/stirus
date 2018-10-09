@@ -1,0 +1,20 @@
+extends ../templates/template.pug
+block content
+  +header
+  +front-min('Галерея', 'Фотоматериал процесса строительства объекта')
+  .container
+    .row.mt-30
+      .col-lg-4.col-sm-6
+        +picture("img/IMG_20180927_113750.jpg", "background-image: url(../img/IMG_MIN_20180927_113750.jpg);")
+      .col-lg-4.col-sm-6.d-none.d-sm-block
+        +picture("img/IMG_20180917_103424.jpg", "background-image: url(../img/IMG_MIN_20180917_103424.jpg);")
+      .col-lg-4.col-sm-6.d-none.d-lg-block
+        +picture("img/IMG_20180927_113737.jpg", "background-image: url(../img/IMG_MIN_20180927_113737.jpg);")
+    .row.mt-20
+      .col-lg-4.col-sm-6
+        +picture("img/IMG_20180917_103426.jpg", "background-image: url(../img/IMG_MIN_20180917_103426.jpg);")
+      .col-lg-4.col-sm-6.d-none.d-sm-block
+        +picture("img/IMG_20180917_103429.jpg", "background-image: url(../img/IMG_MIN_20180917_103429.jpg);")
+      .col-lg-4.col-sm-6.d-none.d-lg-block
+        +picture("img/IMG_20180927_113742.jpg", "background-image: url(../img/IMG_MIN_20180927_113742.jpg);")
+  +footer(class="mt-30")

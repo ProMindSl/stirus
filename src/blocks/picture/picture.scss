@@ -4,4 +4,20 @@
 	margin: 0 auto;
 	max-width: 425px;
 	height: 200px;
+
+	.ug
+	{
+		opacity: 0;
+		max-width: 425px;
+		height: 200px;
+		background: rgba(255, 255, 255, 0.2);
+		transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+		&:hover
+		{
+			opacity: 1;
+			visibility: visible;
+			transition-delay: 0s;
+		}
+	}
 }
