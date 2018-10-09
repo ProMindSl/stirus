@@ -1,0 +1,1 @@
+TweenMax.from('.front-min__comment', 3, {opacity:0});
