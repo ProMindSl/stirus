@@ -1,5 +1,5 @@
-mixin item(title, dscr, date, modifier)
-  a.item(href="#")&attributes(attributes)
+mixin item(title, dscr, date, href, modifier)
+  a.item(href=href)&attributes(attributes)
     .item__picture(style="background-image: url(../img/item.jpg);")
     .item__content
       .item__content-top
