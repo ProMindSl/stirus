@@ -1,71 +1,23 @@
-mixin content-table(modifier)
-  .container.mt-30
-    .row
-      .col-lg-8.mx-auto
-        table.table.content-table
-          thead
-            tr
-              th(scope='col') #
-              th(scope='col') Наименование документа
-              th(scope='col') Тип файла
-          tbody
-            tr(onclick="location.href='img/01_ustav_ooo.pdf'")
-              th(scope='row') 1
-              td Устав Общества с ограниченной ответственностью «СТИРУС»
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/02_ustav_ooo.pdf'")
-              th(scope='row') 2
-              td Изменения в новую редакцию Устава общества с ограниченной ответственностью «СТИРУС»
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/03_egrul.pdf'")
-              th(scope='row') 3
-              td Лист записи Единого государственного реестра юридических лист
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/04_audit.pdf'")
-              th(scope='row') 4
-              td Аудиторское заключение о бухгалтерской (финансовой) отчетности ООО «СТИРУС» за 2017 год
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/01_obj_cadastr.pdf'")
-              th(scope='row') 5
-              td Кадастровая выписка о земельном участке
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/02_obj_svidetelstvo.pdf'")
-              th(scope='row') 6
-              td Свидетельство о государственной регистрации права
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/03_obj_razreshenie_na_str.pdf'")
-              th(scope='row') 7
-              td Разрешение на строительство от 24.04.2018
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/04_obj_proj_declaracia.pdf'")
-              th(scope='row') 8
-              td Проектная декларация от 11.06.2018
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/05_obj_ecspertiza.pdf'")
-              th(scope='row') 9
-              td Негосударственная экспертиза
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/06_obj_pof.pdf'")
-              th(scope='row') 10
-              td Паспорт отделки фасада
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/07_obj_rd.pdf'")
-              th(scope='row') 11
-              td Рабочая документация. Раздел «Архитектурные решения»
-              td PDF
-                img(src="img/pdf.svg")
-            tr(onclick="location.href='img/08_obj_dogovor_du.pdf'")
-              th(scope='row') 12
-              td Договор участия в долевом строительстве
-              td PDF
-                img(src="img/pdf.svg")
+mixin content-table(col_names, rows, hrefs, modifier)
+  .content-table(class=modifier)
+    .container
+      .row
+        .col-lg-8.mx-auto
+          - var colsCount = col_names.length;
+          table.table
+            thead
+              tr
+                - for(let i=0; i<colsCount; i++) { /* учитываем кол-во элементов массива столбцов переданный в аргументе */
+                th(scope='col')=col_names[i] /* заполнение наименований столбцов таблицы*/
+                - }
+            tbody
+              - for(let i=0; i<rows.length; i++) {
+              tr(onclick=hrefs[i])
+                th(scope='row')=(i+1)
+                - for(let j=1; j<rows[i].length; j++) {
+                td=rows[i][j] /* заполнение строк таблицы из аргумента-массива*/
+                  - if (rows[i][j] == 'PDF') { /* добавляем картинку pdf в соответствующую ячейку */
+                  img(src="img/pdf.svg")
+                  - }
+                - }
+              - }
