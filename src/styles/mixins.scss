@@ -4,6 +4,18 @@
   transition: 0.3s cubic-bezier(0.250, 0.100, 0.250, 1.000);
 }
 
+@mixin transitionM($param, $time)
+{
+  -webkit-transition: $param $time ease 0s;
+  transition: $param $time ease 0s;
+}
+
+/*@mixin transformObj($val)
+{
+  -webkit-transform: $val; 
+  trasform: $val;
+}*/
+
 
 /* Миксин замены цвета placeholder у input. 
 Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
