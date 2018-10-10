@@ -1,5 +1,8 @@
 .item 
 {
+  position: relative;
+  @include transitionM(transform, 0.3s);
+
   max-width: 425px;
   height: 470px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
@@ -63,5 +66,8 @@
   &:hover
   {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    @include transitionM(transform, 0.3s);
   }
 }
