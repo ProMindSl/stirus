@@ -1,8 +1,9 @@
 .info-item 
 {
-  width: 330px;
+  width: 320px;
   height: 128px;
-  background-color: green;
+  
+  /*background-color: green;*/
 
   font-family: $font-family-sans-serif;
 
@@ -22,11 +23,11 @@
   
   &__content 
   {
-    height: 128px;
+    /*height: 128px;*/
     display: flex;
     flex-direction: column;
 
-    background: white;
+    /*background: white;*/
   }
     
   &__title 
@@ -38,7 +39,7 @@
     font-size: 18px;
     font-weight: 500;
 
-    background: yellow;
+    /*background: yellow;*/
   }
   
   &__discr
@@ -47,8 +48,8 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-
-    background: gray;
+    width: 240px;
+    /*background: gray;*/
   }
   
 }
