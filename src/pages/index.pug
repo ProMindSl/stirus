@@ -5,7 +5,7 @@ block content
   .container.mt-60
     .row.d-flex
       .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
-        +item('Свидетельство', 'Свидетельство о государственной регистрации права в Едином государственном реестре', '25.03.2013', 'img/02_obj_svidetelstvo.pdf')
+        +item('Свидетельство', 'Свидетельство о государственной регистрации права в Едином государственном реестре', '25.03.2013', 'img/02_obj_svidetelstvo.pdf', 'img/bookmark-alt.svg')
       .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
         +item('Кадастровая выписка', 'Свод сведений о земельном участке из Государственного кадастра недвижимости представленный в текстовом, и в графическом виде', '05.03.2013', 'img/01_obj_cadastr.pdf')
       .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
@@ -28,7 +28,7 @@ block content
         +picture("img/IMG_20180917_103424.jpg", "background-image: url(../img/IMG_MIN_20180917_103424.jpg);")
       .col-lg-4.col-sm-6.d-none.d-lg-block
         +picture("img/IMG_20180927_113737.jpg", "background-image: url(../img/IMG_MIN_20180927_113737.jpg);")
-  .container-fluid
+  .container-fluid.mb-100
     .row
       .col-12
         h2.mt-70.text-center Напишите нам
@@ -39,4 +39,4 @@ block content
           textarea.input.input--textarea(placeholder="Сообщение").mt-20
           .d-flex.justify-content-center.mt-30
             input.btn(type="submit", value="Отправить")
-  +footer(class="mt-100")
+  +footer

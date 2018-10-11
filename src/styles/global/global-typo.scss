@@ -1,4 +1,17 @@
-h1 {
+html
+{
+  height: 100%;
+}
+
+body
+{
+  min-height:100%; 
+  position:relative; 
+  padding-bottom: 140px; 
+}
+
+h1 
+{
   font-size: 70px;
   font-weight: 500;
   color: $dark;
@@ -9,7 +22,8 @@ h1 {
   }
 }
 
-h2 {
+h2 
+{
   font-size: 42px;
   font-weight: 500;
   line-height: 66px;

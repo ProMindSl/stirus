@@ -2,7 +2,7 @@ extends ../templates/template.pug
 block content
   +header
   +front-min('Галерея', 'Фотоматериал процесса строительства объекта')
-  .container
+  .container.mb-30
     .row.mt-30
       .col-lg-4.col-sm-6
         +picture("img/IMG_20180927_113750.jpg", "background-image: url(../img/IMG_MIN_20180927_113750.jpg);")
@@ -17,4 +17,4 @@ block content
         +picture("img/IMG_20180917_103429.jpg", "background-image: url(../img/IMG_MIN_20180917_103429.jpg);")
       .col-lg-4.col-sm-6.d-none.d-lg-block
         +picture("img/IMG_20180927_113742.jpg", "background-image: url(../img/IMG_MIN_20180927_113742.jpg);")
-  +footer(class="mt-30")
+  +footer
