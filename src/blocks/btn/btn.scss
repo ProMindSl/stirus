@@ -11,4 +11,11 @@
     font-family: $font-family-sans-serif;
     font-weight: 400;
     font-size: 18px;
+    @include transitionM(background-color, 0.3s);
+    
+    &:hover
+    {
+        background-color: $light_primary;
+        @include transitionM(background-color, 0.3s);
+    }
 }

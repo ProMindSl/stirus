@@ -8,6 +8,7 @@
     height: 50px;
     width: 50px;
     background-position: center; 
+    @include transitionM(background-color, 0.3s);
 
     &--fb 
     {
@@ -23,7 +24,8 @@
 
     &:hover
     {
-    	background-color: #ea555d;
+    	background-color: $light_primary;
+        @include transitionM(background-color, 0.3s);
     }
   }
 }
