@@ -4,7 +4,7 @@ block content
   +front-min('Контакты', ' ')
   .container.mt-30
     .row
-      .col-xl-8.col-sm-12.offset-xl-2.d-inline-flex
+      .col-xl-4.col-sm-6.offset-xl-2.offset-sm-3
         form(action="#", method="POST").d-flex.flex-column.align-items-center.mt-10
           .d-flex.justify-content-center
             h3 Обратная связь
@@ -12,16 +12,17 @@ block content
           input.input(type="email", placeholder="Email").mt-20
           textarea.input.input--textarea(placeholder="Сообщение").mt-20
           .d-flex.justify-content-center.mt-30
-            input.btn(type="submit", value="Отправить")
-        .d-flex.flex-column.ml-100.mt-20
+            input.btn.mb-20(type="submit", value="Отправить")
+      .col-xl-3.col-sm-6.offset-xl-1.offset-sm-3
+        .d-flex.flex-column.align-items-center.mt-20
           +info-item("Телефон", "8-909-218-1642", "img/pic_mobile.svg")
           +info-item("Адрес", "г. Липецк, ул. Терешковой, д.3, пом.8, оф. 1", "img/pic_location-pin.svg")
           +info-item("E-mail", "Stirus2018@yandex.ru", "img/pic_email.svg")
   .container.mt-40.mb-30
     .row
-      .col-12
+      .col-lg-6.col-sm-8.offset-lg-3.offset-sm-2
         .d-flex.justify-content-center
           h3 Схема проезда
-        .img-thumbnail.mx-auto(style="width: 710px; height: 310px;")
-          script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A671d5490de062222d23d15fc28590af996d0170a9dc108f4101b9d962c19d74c&amp;width=700&amp;height=300&amp;lang=ru_RU&amp;scroll=true")
+        .img-thumbnail.mx-auto
+          script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab154d185035dd49af3e982c5043e7a35210ec913841471a58dcf8b1484c8638b&amp;width=100%25&amp;height=354&amp;lang=ru_RU&amp;scroll=true")
   +footer.mt-30
