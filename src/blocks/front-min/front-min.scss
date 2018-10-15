@@ -14,17 +14,15 @@
     max-width: 1366px;
     background: #ffffff url("../img/front_min__bg.png") no-repeat;
     /*background-position-y: -70px;*/
-      
   }
 
-
-  h1.text-center
+  &__text-center
   { 
-      
     font-size: 70px;
     font-weight: 500;
     line-height: 70px;
-    
+    text-align: center;
+
     position: relative;
     top: 10px;
 
@@ -33,6 +31,8 @@
       font-size: 40px;
     }
   }
+ 
+ 
 
   &__comment  /*p.front-min__comment*/ 
   {
