@@ -1,6 +1,13 @@
 mixin front(modifier)
   .front&attributes(attributes)
-    .container(id="bg_front")
+    .bg(id="bg_front")
+      .bg_6(id="bg_front_l6")
+        .bg_5(id="bg_front_l5")
+          .bg_4(id="bg_front_l4")
+            .bg_3(id="bg_front_l3")
+              .bg_2(id="bg_front_l2")
+                .bg_1(id="bg_front_l1")
+    .container(id="content_front")
       .row
         .col-lg-8.mx-auto
           h1.text-center ООО «СТИРУС»
