@@ -33,7 +33,7 @@ window.onload = function()
 /* Скроллинг bg*/
 function bgMove()
 {
-	if(window.location.href == '*/index.html') console.log('ok');
+	if(window.location.href.origin == '*/index.html') console.log('ok');
 
 	/*let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 	
