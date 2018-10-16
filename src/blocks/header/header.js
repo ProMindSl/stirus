@@ -9,5 +9,5 @@ var currPage = PAGE_INDEX;
 
 $('.header__link').click(function()
 {
-	alert(this.origin);
+	/*alert(this.origin);*/
 });

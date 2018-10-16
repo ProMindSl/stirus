@@ -33,9 +33,9 @@ window.onload = function()
 /* Скроллинг bg*/
 function bgMove()
 {
-	if(window.location.href.origin == '*/index.html') console.log('ok');
+	/*if(window.location.href.origin == 'index.html') console.log('ok');*/
 
-	/*let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 	
 	let posY_bg1 = 317+(scrolled/10)+'px';
 	TweenMax.to(bg_1, 1, {backgroundPositionY:posY_bg1});
@@ -50,6 +50,6 @@ function bgMove()
 	TweenMax.to(bg_4, 1, {backgroundPositionY:posY_bg4});
 
 	let posY_bg5 = (scrolled/10)-70+'px';
-	TweenMax.to(bg_5, 1, {backgroundPositionY:posY_bg5});*/
+	TweenMax.to(bg_5, 1, {backgroundPositionY:posY_bg5});
 
 };
