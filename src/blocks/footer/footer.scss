@@ -5,14 +5,16 @@
   right: 0;
   bottom: 0; 
   height: 140px; 
- 
+  border-top: 1px solid #e0e0e0;
   &__top 
   {
   	display: flex;
   	justify-content: space-between;
   	align-content: space-between;
     min-height: 140px;
-    border-top: 1px solid #e0e0e0;
+    max-width: 1366px;
+
+    
 
     /* компенсация отступов сетки bootstrap  */
     margin-right: -15px; 
@@ -69,6 +71,7 @@
   {
   	display: block; 
   	min-height: 45px;
+    max-width: 1366px;
   	font-family: $font-family-sans-serif;
   	font-size: 16px;
 	  font-weight: 300;
