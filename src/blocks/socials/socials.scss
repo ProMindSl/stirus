@@ -10,15 +10,15 @@
     background-position: center; 
     @include transitionM(background-color, 0.3s);
 
-    &--fb 
+    &--phone 
     {
-    	background: $primary url("../img/fb_pic.svg") no-repeat;
+    	background: $primary url("../img/pic_headphone.svg") no-repeat;
     	background-position: center;
     }
     
-    &--tw 
+    &--up 
     {
-    	background: $primary url("../img/tw_pic.svg") no-repeat;
+    	background: $primary url("../img/pic_up.svg") no-repeat;
     	background-position: center;
     }
 
