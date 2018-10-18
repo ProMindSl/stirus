@@ -27,6 +27,7 @@ function frontTitileStart()
 window.onload = function() 
 {
 	window.onscroll = onScrollHandler;
+	
 };
 
 
