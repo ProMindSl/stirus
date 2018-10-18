@@ -27,7 +27,7 @@
 		  /*Стили в блоке logo*/
     }
 
-    .header__sitemap /*&__sitemap */
+    .&__sitemap /*&__sitemap */
     {
       flex-grow: 1;
 
@@ -41,7 +41,7 @@
       }
     }
     
-    .header__link  /*&__link */
+    .&__link  /*&__link */
     {
       display: inline-flex;
       align-items: center;

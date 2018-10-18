@@ -26,15 +26,20 @@ function frontTitileStart()
 
 window.onload = function() 
 {
-	window.onscroll = bgMove;
+	window.onscroll = onScrollHandler;
 };
 
+
+function onScrollHandler()
+{
+	/* Если текущая страница - главная, двигаем элементы заднего фона front-блока*/
+	if(window.location.href == PAGE_INDEX) bgMove();
+
+}
 
 /* Скроллинг bg*/
 function bgMove()
 {
-	/*if(window.location.href.origin == 'index.html') console.log('ok');*/
-
 	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
 	
 	let posY_bg1 = 317+(scrolled/10)+'px';
