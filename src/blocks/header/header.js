@@ -7,7 +7,51 @@ const PAGE_CONTACT = 'http://localhost:3000/contact.html';
 
 var currPage = PAGE_INDEX;
 
-$('.header__link').click(function()
+setCurrPage(getNameByURL(window.location.href));
+
+function setCurrPage(name)
 {
-	//alert(this);
-});
+	switch(name)
+	{
+		case 'main':
+			currPage = PAGE_INDEX;
+			break;
+
+		case 'documents':
+			currPage = PAGE_DOCUMENTS;
+			break;
+
+		case 'galery':
+			currPage = PAGE_GALERY;
+			break;
+
+		case 'contact':
+			currPage = PAGE_CONTACT;
+			break;
+	}
+	/* Меняем цвет кнопки текущей страницы в хэдере*/
+	$('.header__link[name='+name+']').css({'color':'#bb1620'});
+}
+
+function getNameByURL(url)
+{
+	switch (url)
+	{
+		case PAGE_INDEX:
+			return 'main';
+			break;
+
+		case PAGE_DOCUMENTS:
+			return 'documents';
+			break;
+
+		case PAGE_GALERY:
+			return 'galery';
+			break;
+
+		case PAGE_CONTACT:
+			return 'contact';
+			break;
+	}
+
+}
