@@ -24,6 +24,7 @@
 
     &:hover
     {
+        cursor: pointer;
     	background-color: $light_primary;
         @include transitionM(background-color, 0.3s);
     }
