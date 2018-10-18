@@ -27,7 +27,20 @@
 		  /*Стили в блоке logo*/
     }
 
-    .&__sitemap /*&__sitemap */
+    
+
+    a.btn
+    {
+
+    	width: 163px;
+   		height: 50px;
+    	margin-right: 15px;
+      color: #ffffff;
+      font-weight: 400;
+    }
+  }
+
+  &__menu
     {
       flex-grow: 1;
 
@@ -41,7 +54,7 @@
       }
     }
     
-    .&__link  /*&__link */
+    &__link
     {
       display: inline-flex;
       align-items: center;
@@ -62,16 +75,5 @@
         color: $dark_primary;
       }
     }
-
-    a.btn
-    {
-
-    	width: 163px;
-   		height: 50px;
-    	margin-right: 15px;
-      color: #ffffff;
-      font-weight: 400;
-    }
-  }
  
 }
