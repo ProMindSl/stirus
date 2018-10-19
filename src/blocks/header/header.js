@@ -67,5 +67,4 @@ function windowSize(){
     	$('.btn[name="homes"]').text("Квартиры");
     } 
 }
-/*$(window).load(windowSize); // при загрузке*/
 $(window).resize(windowSize); // при изменении размеров
