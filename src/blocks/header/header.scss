@@ -5,11 +5,6 @@
   &__content 
   {
 
-    /* Пример медиа-запроса. Подробнее здесь: https://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints */
-    @include media-breakpoint-down(md) 
-    {
-      //padding: 10px 0;
-    }
     
     display: flex;
     justify-content: space-between;
@@ -18,14 +13,32 @@
     max-width: 1366px;
 
     /* компенсация отступов сетки bootstrap  */
-	  margin-right: -15px;  
-	  margin-left: -15px;
-
+	  /*margin-right: -15px;  
+	  margin-left: -15px;*/
+    /* */
+    /*@include media-breakpoint-down(lg) 
+    {
+      margin-right: 0px;  
+      margin-left: 0px;
+    }*/
+    
     background-color: #ffffff;
     
     a.logo
     {
 		  /*Стили в блоке logo*/
+      
+      /* отступы */
+      margin-right: 15px;  
+      margin-left: 15px;
+      /*@include media-breakpoint-down(lg) 
+      { 
+        margin-left: 0px;
+      }*/
+      @media all and (max-width: 1400px)
+      {
+        margin-left: 0px;
+      }
     }
 
     
@@ -35,9 +48,18 @@
 
     	width: 163px;
    		height: 50px;
-    	margin-right: 15px;
-      color: #ffffff;
+    	color: #ffffff;
       font-weight: 400;
+
+      margin-right: 15px;
+      /*@include media-breakpoint-down(lg) 
+      { 
+        margin-right: 0px;
+      }*/
+      @media all and (max-width: 1400px)
+      {
+        margin-right: 0px;
+      }
     }
   }
 
