@@ -15,12 +15,7 @@
     /* компенсация отступов сетки bootstrap  */
 	  /*margin-right: -15px;  
 	  margin-left: -15px;*/
-    /* */
-    /*@include media-breakpoint-down(lg) 
-    {
-      margin-right: 0px;  
-      margin-left: 0px;
-    }*/
+    
     
     background-color: #ffffff;
     
@@ -48,6 +43,16 @@
 
     	width: 163px;
    		height: 50px;
+      /* меняем дизайн кнопки в шапке при заданной ширине */
+      @media all and (max-width:760px)
+      {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background: $primary url(../img/key_btnpic.svg) no-repeat;
+        background-position: center; 
+      }
+
     	color: #ffffff;
       font-weight: 400;
 

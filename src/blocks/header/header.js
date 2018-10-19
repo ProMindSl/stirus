@@ -8,6 +8,7 @@ const PAGE_CONTACT = 'http://localhost:3000/contact.html';
 var currPage = PAGE_INDEX;
 
 setCurrPage(getNameByURL(window.location.href));
+windowSize();
 
 function setCurrPage(name)
 {
@@ -55,3 +56,16 @@ function getNameByURL(url)
 	}
 
 }
+
+/* Адаптивность для элементов шапки */
+function windowSize(){
+    if ($(window).width() <= '740'){
+        $('.btn[name="homes"]').text(" ");
+        /*alert('chf,jnfk');*/
+    } else
+    {
+    	$('.btn[name="homes"]').text("Квартиры");
+    } 
+}
+/*$(window).load(windowSize); // при загрузке*/
+$(window).resize(windowSize); // при изменении размеров
