@@ -50,6 +50,13 @@
       {
         display: none;
       }
+
+      margin-right: 15px;
+      
+      @media all and (max-width: 1400px)
+      {
+        margin-right: 0px;
+      }
     }
 
     a.btn_home
@@ -91,6 +98,7 @@
         width: 50px;
         background: $primary url(../img/menu_btnpic.svg) no-repeat;
         background-position: center; 
+        margin-right: 10px;
       }
     }
 
