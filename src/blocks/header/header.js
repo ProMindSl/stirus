@@ -8,7 +8,7 @@ const PAGE_CONTACT = 'http://localhost:3000/contact.html';
 var currPage = PAGE_INDEX;
 
 setCurrPage(getNameByURL(window.location.href));
-windowSize();
+//windowSize();
 
 function setCurrPage(name)
 {
@@ -58,13 +58,15 @@ function getNameByURL(url)
 }
 
 /* Адаптивность для элементов шапки */
-function windowSize(){
-    if ($(window).width() <= '740'){
-        $('.btn[name="homes"]').text(" ");
-        /*alert('chf,jnfk');*/
+/*function windowSize()
+{
+	// для кнопки "Квартиры" 
+    if ($(window).width() <= '760'){
+        $('.btn_home[name="homes"]').text(" ");
+        //alert('chf,jnfk');
     } else
     {
-    	$('.btn[name="homes"]').text("Квартиры");
+    	$('.btn_home[name="homes"]').text("Квартиры");
     } 
-}
-$(window).resize(windowSize); // при изменении размеров
+}*/
+//$(window).resize(windowSize); // при изменении размеров
