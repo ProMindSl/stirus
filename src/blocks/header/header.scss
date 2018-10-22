@@ -116,6 +116,11 @@
       {
         background-color: $light_primary;
       }
+
+      &:hover + .header__menu
+      {
+        opacity: 1;
+      }
     }
 
   }
@@ -138,9 +143,19 @@
         background-color: #ffffff;
         text-align: center;
         z-index: 100;
+        opacity: 0;
+
+
+
       }
    }
-    
+    a.btn_menu:hover ~ .header__menu
+        {
+          @media all and (max-width: 650px)
+          {
+            opacity: 1;
+          }
+        }
     &__link
     {
       display: inline-flex;
@@ -170,6 +185,11 @@
         padding-left: 20px;
         border-top: #eff0f4 solid 1px;
         /*align-self: center;*/
+
+        &:hover
+        {
+          background-color: #f9faff;
+        }
       }
     }
  
