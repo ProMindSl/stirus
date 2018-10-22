@@ -11,7 +11,7 @@
     align-items: center;
     min-height: 70px;
     max-width: 1366px;
-
+    position: relative;
     /* компенсация отступов сетки bootstrap  */
 	  /*margin-right: -15px;  
 	  margin-left: -15px;*/
@@ -57,6 +57,12 @@
       {
         margin-right: 0px;
       }
+
+      &:hover
+      {
+        color: #ffffff;
+        background-color: $light_primary;
+      }
     }
 
     a.btn_home
@@ -83,6 +89,11 @@
       {
         margin-right: 0px;
       }
+
+      &:hover
+      {
+        background-color: $light_primary;
+      }
     }
     
     a.btn_menu
@@ -100,22 +111,35 @@
         background-position: center; 
         margin-right: 10px;
       }
+
+      &:hover
+      {
+        background-color: $light_primary;
+      }
     }
 
   }
 
-  &__menu
-    {
+   &__menu
+   {
+      position: static;
       flex-grow: 1;
-
       display: inline-flex;
       
       /* Перестройка меню карты сайта при маленьком разрешении */
       @media all and (max-width: 650px)
       {
-        display: none;
+        /*display: none;*/
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 100;
       }
-    }
+   }
     
     &__link
     {
@@ -136,6 +160,16 @@
       &:hover
       {
         color: $dark_primary;
+      }
+
+      @media all and (max-width: 650px)
+      {
+        width: 130px;
+        height: 55px;
+        margin-left: 0px;
+        padding-left: 20px;
+        border-top: #eff0f4 solid 1px;
+        /*align-self: center;*/
       }
     }
  
