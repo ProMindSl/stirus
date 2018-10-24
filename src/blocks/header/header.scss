@@ -115,12 +115,9 @@
       &:hover
       {
         background-color: $light_primary;
+        cursor: pointer;
       }
-
-      &:hover + .header__menu
-      {
-        opacity: 1;
-      }
+     
     }
 
   }
@@ -130,34 +127,24 @@
       position: static;
       flex-grow: 1;
       display: inline-flex;
-      
-      /* Перестройка меню карты сайта при маленьком разрешении */
+      opacity: 1;
+
+      /* Перестройка меню сайта при маленьком разрешении */
       @media all and (max-width: 650px)
       {
-        /*display: none;*/
+        display: none;
         position: absolute;
         top: 70px;
         right: 10px;
-        display: flex;
         flex-direction: column;
         background-color: #ffffff;
         text-align: center;
         z-index: 100;
-        opacity: 0;
-
-
-
       }
    }
-    a.btn_menu:hover ~ .header__menu
-        {
-          @media all and (max-width: 650px)
-          {
-            opacity: 1;
-          }
-        }
-    &__link
-    {
+   
+   &__link
+   {
       display: inline-flex;
       align-items: center;
       color: #1a1a1a;
@@ -191,6 +178,5 @@
           background-color: #f9faff;
         }
       }
-    }
- 
+   }
 }

@@ -57,16 +57,34 @@ function getNameByURL(url)
 
 }
 
-/* Адаптивность для элементов шапки */
-/*function windowSize()
+// обработчик клика на кнопку меню
+$('.btn_menu[name="menu"]').on('click', function() {
+	let _menu = $('nav.header__menu');
+
+	if(_menu.css('display') == 'none')	
+	{
+		_menu.css({'display': 'inline-flex'});
+		TweenMax.from( _menu, 0.5, {x:200, ease: Power4.easeOut});
+	}
+	else 
+	{
+		_menu.css({'display': 'none'});
+	}
+});
+
+
+/* Включаем display для меню при морфе в десктопное меню */
+function windowResizeHandler_fromHeader()
 {
-	// для кнопки "Квартиры" 
-    if ($(window).width() <= '760'){
-        $('.btn_home[name="homes"]').text(" ");
-        //alert('chf,jnfk');
-    } else
-    {
-    	$('.btn_home[name="homes"]').text("Квартиры");
-    } 
-}*/
-//$(window).resize(windowSize); // при изменении размеров
+	/*console.log($(window).width());*/
+	let _menu = $('nav.header__menu');
+	if ($(window).width() > '650')
+	{
+		if(_menu.css('display') == 'none')	_menu.css({'display': 'inline-flex'});
+	}
+	else if ($(window).width() <= '650')
+	{
+		_menu.css({'display': 'none'});
+	} 
+}
+$(window).resize(windowResizeHandler_fromHeader); // при изменении размеров
