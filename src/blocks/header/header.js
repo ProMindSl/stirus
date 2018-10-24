@@ -38,7 +38,7 @@ function getNameByURL(url)
 {
 	switch (url)
 	{
-		case PAGE_INDEX:
+		case PAGE_INDEX || PAGE_INDEX+'#':
 			return 'main';
 			break;
 
