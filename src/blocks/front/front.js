@@ -35,6 +35,7 @@ function onScrollHandler()
 {
 	/* Если текущая страница - главная, двигаем элементы заднего фона front-блока*/
 	if(window.location.href == PAGE_INDEX) bgMove();
+	else if (window.location.href == PAGE_INDEX+'#') bgMove();
 
 }
 
