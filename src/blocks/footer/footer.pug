@@ -6,7 +6,18 @@ mixin footer(modifier)
           .footer__top.mx-auto
             nav.footer__sitemap
               a.footer__link(href="#") Карта сайта
-              a.footer__link(href="#") Сайт-инфо
+              a.footer__link(data-toggle="modal" data-target="#exampleModal") Сайт-инфо
               a.footer__link(href="#") О Компании
             +socials(class="mt-20 mr-5")
           span.footer__copyright.mx-auto  © 2018 ООО "Стирус" Строительная компания
+    .modal.fade(id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            h5.modal-title(id="exampleModalLabel") Title
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body ok then
+          .modal-footer
+            button.btn.btn-secondary(data-dismiss="modal") Close
+            button.btn.btn-primary Save Changes
