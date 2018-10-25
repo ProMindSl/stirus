@@ -1,23 +1,25 @@
 mixin footer(modifier)
   .footer&attributes(attributes)
+    .modal.fade(id="modal_AboutSite" tabindex="-1" role="dialog" aria-labelledby="modalLabel_AboutSite" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            h5.modal-title(id="modalLabel_AboutSite") Информация о разразработке сайта
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body
+            p Сайт разработан ГОАОУ «Центр поддержки одаренных детей «Стратегия» по заказу ООО"Стирус".
+            a(href='http://www.strategy48.ru/') www.strategy48.ru
+            p Frontend/Backend-разработка: В.Ю. Авдеев. 
+          .modal-footer
+            button.btn.btn-secondary.mx-auto(data-dismiss="modal") Закрыть
     .container-fluid
       .row
         .col-12
           .footer__top.mx-auto
             nav.footer__sitemap
               a.footer__link(href="#") Карта сайта
-              a.footer__link(data-toggle="modal" data-target="#exampleModal") Сайт-инфо
+              a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
               a.footer__link(href="#") О Компании
             +socials(class="mt-20 mr-5")
           span.footer__copyright.mx-auto  © 2018 ООО "Стирус" Строительная компания
-    .modal.fade(id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
-      .modal-dialog(role="document")
-        .modal-content
-          .modal-header
-            h5.modal-title(id="exampleModalLabel") Title
-            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
-              span(aria-hidden="true") &times;
-          .modal-body ok then
-          .modal-footer
-            button.btn.btn-secondary(data-dismiss="modal") Close
-            button.btn.btn-primary Save Changes
