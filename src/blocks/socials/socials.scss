@@ -29,4 +29,15 @@
         @include transitionM(background-color, 0.3s);
     }
   }
+
+  span.phoneVal
+  {
+    font-size: 20px;
+    color: $primary; 
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+  }
 }

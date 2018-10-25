@@ -1,4 +1,17 @@
 mixin socials(modifier)
   .socials&attributes(attributes)
-    .socials__item.socials__item--phone.mr-10(href="#")
+    .modal.fade(id="modal_SalePhone" tabindex="-1" role="dialog" aria-labelledby="modalLabel_SalePhone" aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            h5.modal-title(id="modalLabel_SalePhone") Отдел продаж
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body
+            span Телефоны:  
+            span.phoneVal.mr-10.ml-10 36-63-11,
+            span.phoneVal 8-908-601-98-58
+          .modal-footer
+            button.btn.btn-secondary.mx-auto(data-dismiss="modal") Закрыть
+    .socials__item.socials__item--phone.mr-10(href="#" data-target="#modal_SalePhone"  data-toggle="modal")
     .socials__item.socials__item--up.mr-10(id="btn_toTop")
