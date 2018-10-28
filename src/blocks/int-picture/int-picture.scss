@@ -1,0 +1,16 @@
+.int-picture
+{
+  .container 
+  {
+    
+  }
+
+  &__plan-cont
+  { 
+    height: 635px;
+    max-width: 1228px;
+    background: #fff; //url("../img/ap_plan.svg") no-repeat; 
+    color: red;
+  }
+ 
+}
