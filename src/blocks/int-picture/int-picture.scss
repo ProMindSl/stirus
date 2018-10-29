@@ -77,13 +77,14 @@
  .home-point-5,
  .home-point-6
  {
-    opacity: 0.1;
+    opacity: 0.5;
+    pointer-events: all;
  }
 
  .home-fill-1
  {
     @include transitionM(fill, 0.5s);
-
+    
  }
  
  .home-point-1:hover ~ .home-fill-1,
@@ -95,12 +96,19 @@
  {
     @include transitionM(fill, 0.5s);
     fill: #ffe5e6;
+    fill: green;
     
  }
- .home-point-1:hover ~ .home-fill-1
+ /*.home-fill-1:hover,
+ .home-fill-2:hover,
+ .home-fill-3:hover,
+ .home-fill-4:hover,
+ .home-fill-5:hover,
+ .home-fill-6:hover
  {
-  fill: green;
- }
+   @include transitionM(fill, 0.5s);
+    fill: #ffe5e6;
+ }*/
 
 
 
