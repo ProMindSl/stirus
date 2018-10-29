@@ -7,10 +7,127 @@
 
   &__plan-cont
   { 
-    height: 635px;
-    max-width: 1228px;
+    height: 622px;
+    max-width: 1200px;
     background: #fff; //url("../img/ap_plan.svg") no-repeat; 
-    color: red;
+    @media all and (max-width: 1250px)
+    {
+      width: 900px;
+      height: 466px;
+    }
+    @media all and (max-width: 950px)
+    {
+      width: 500px;
+      height: 259px;
+    }
+    @media all and (max-width: 550px)
+    {
+      width: 300px;
+      height: 155px;
+    }
   }
+  
+  .pic-plan-svg
+  {
+    @media all and (max-width: 1250px)
+    {
+      width: 900px;
+      height: 466px;
+    }
+    @media all and (max-width: 950px)
+    {
+      width: 500px;
+      height: 259px;
+    }
+    @media all and (max-width: 550px)
+    {
+      width: 300px;
+      height: 155px;
+    }
+  }
+
+ line,
+ rect,
+ path,
+ ellipse
+ {
+   stroke: #808080;
+ }
+
+ .txt-home-1,
+ .txt-home-2,
+ .txt-home-3,
+ .txt-home-4,
+ .txt-home-5,
+ .txt-home-6
+ {
+    @include transitionM(opacity, 0.5s);
+    opacity: 0.5;
+
+    @media all and (max-width: 950px)
+    {
+      opacity: 0;
+    }
+ }
  
+ .home-point-1,
+ .home-point-2,
+ .home-point-3,
+ .home-point-4,
+ .home-point-5,
+ .home-point-6
+ {
+    opacity: 0.1;
+ }
+
+ .home-fill-1
+ {
+    @include transitionM(fill, 0.5s);
+
+ }
+ 
+ .home-point-1:hover ~ .home-fill-1,
+ .home-point-2:hover ~ .home-fill-2,
+ .home-point-3:hover ~ .home-fill-3,
+ .home-point-4:hover ~ .home-fill-4,
+ .home-point-5:hover ~ .home-fill-5,
+ .home-point-6:hover ~ .home-fill-6
+ {
+    @include transitionM(fill, 0.5s);
+    fill: #ffe5e6;
+    
+ }
+ .home-point-1:hover ~ .home-fill-1
+ {
+  fill: green;
+ }
+
+
+
+ .home-point-1:hover ~ .txt-home-1,
+ .home-point-2:hover ~ .txt-home-2,
+ .home-point-3:hover ~ .txt-home-3,
+ .home-point-4:hover ~ .txt-home-4,
+ .home-point-5:hover ~ .txt-home-5,
+ .home-point-6:hover ~ .txt-home-6
+ {
+    @include transitionM(opacity, 0.5s);
+    opacity: 1;
+
+    @media all and (max-width: 950px)
+    {
+      opacity: 0;
+    }
+ }
+ 
+/* CURRENT!!!
+ фасадная полилиния(заливка), которая перекрывается глобальными стилями, 
+ правим через id */
+ #fasad_m
+ {
+  stroke: #cccccc;
+ }
+
+
+
 }
