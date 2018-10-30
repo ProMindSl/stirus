@@ -1,8 +1,17 @@
 .int-picture
 {
   .container 
+  {    
+  }
+
+  &__label
   {
-    
+    height: 22px;
+    width: 300px;
+    font-size: 16px;
+    color: $dark_primary;
+    @include transitionM(opacity, 0.5s);
+    opacity: 0.9;
   }
 
   &__plan-cont
@@ -10,23 +19,9 @@
     height: 622px;
     max-width: 1200px;
     background: #fff; //url("../img/ap_plan.svg") no-repeat; 
-    @media all and (max-width: 1250px)
-    {
-      width: 900px;
-      height: 466px;
-    }
-    @media all and (max-width: 950px)
-    {
-      width: 500px;
-      height: 259px;
-    }
-    @media all and (max-width: 550px)
-    {
-      width: 300px;
-      height: 155px;
-    }
   }
   
+  &__plan-cont,
   .pic-plan-svg
   {
     @media all and (max-width: 1250px)
@@ -77,8 +72,20 @@
  .home-point-5,
  .home-point-6
  {
-    opacity: 0.5;
+    opacity: 0.1;
     pointer-events: all;
+    @include transitionM(fill, 0.5s);
+ }
+
+ .home-point-1:hover,
+ .home-point-2:hover,
+ .home-point-3:hover,
+ .home-point-4:hover,
+ .home-point-5:hover,
+ .home-point-6:hover
+ {
+   @include transitionM(fill, 0.5s);
+   fill: red;
  }
 
  .home-fill-1
@@ -96,8 +103,7 @@
  {
     @include transitionM(fill, 0.5s);
     fill: #ffe5e6;
-    fill: green;
-    
+    opacity: 0;
  }
  /*.home-fill-1:hover,
  .home-fill-2:hover,
