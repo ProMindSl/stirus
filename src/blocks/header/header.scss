@@ -5,11 +5,12 @@
   &__content 
   {
 
-    
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
+    -webkit-box-align: center;
     align-items: center;
-    min-height: 70px;
+    height: 70px;
     max-width: 1366px;
     position: relative;
     /* компенсация отступов сетки bootstrap  */
@@ -126,7 +127,7 @@
    {
       position: static;
       flex-grow: 1;
-      display: inline-flex;
+      /*display: inline-flex;*/
       opacity: 1;
 
       /* Перестройка меню сайта при маленьком разрешении */

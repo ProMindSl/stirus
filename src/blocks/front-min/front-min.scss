@@ -6,15 +6,29 @@
 
   .container 
   {
-    display: flex;
-    flex-direction: column;
+    /*display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-content: center;*/
+    display: table;
     min-height: 230px;
     max-width: 1366px;
     background: #ffffff url("../img/front_min__bg.png") no-repeat;
     /*background-position-y: -70px;*/
+
+    .row
+    {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
+
+
+
 
   &__text-center
   { 
@@ -34,7 +48,7 @@
  
  
 
-  &__comment  /*p.front-min__comment*/ 
+  &__comment  
   {
     font-size: 18px;
     font-weight: 400;
